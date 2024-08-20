@@ -185,10 +185,10 @@ class Poll(Object, Update):
             ] if poll_results.solution_entities else None,
             open_period=poll.close_period,
             close_date=utils.timestamp_to_datetime(poll.close_date),
-            recent_voters=[
-                await client.get_users(user.user_id)
-                for user in poll_results.recent_voters
-            ] if poll_results.recent_voters else None,
+            #recent_voters=[
+            #    await client.get_users(user.user_id)
+            #    for user in poll_results.recent_voters
+            #] if poll_results.recent_voters else None,
             client=client
         )
 
